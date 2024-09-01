@@ -1,0 +1,99 @@
+.record_container {
+    position: relative; // Required to position the pseudo-element correctly
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-image: url('../../public/img/hairShop.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+
+    &:before {
+        content: ""; // Required to create the pseudo-element
+        position: absolute; // Absolute positioning to cover the parent element
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); // Black background with 50% transparency
+        z-index: -1; // Ensure the overlay is behind the content
+    }
+
+    h1 {
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        position: relative; // Ensure the content stays above the overlay
+        z-index: 2;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .records_grid {
+        position: relative;
+        z-index: 2; // Ensure the content stays above the overlay
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .record_item {
+        position: relative;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: 10px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .record_image {
+            width: 100%;
+            height: 300px;
+            object-fit: fill;
+        }
+
+        .record_details {
+            padding: 25px;
+            text-align: center;
+            width: 100%;
+
+            .hairstyle_name {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            .search_date {
+                font-size: 0.9em;
+                color: #666;
+            }
+
+            .delete_button {
+                width: 100px;
+                background-color: #ff4d4d;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 10px;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #cc0000;
+                }
+            }
+        }
+    }
+}

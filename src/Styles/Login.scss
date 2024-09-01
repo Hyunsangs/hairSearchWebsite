@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../public/img/hairShop.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &:before{
+        content: ""; // 필수 속성
+        position: absolute; // 절대 위치 설정
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); // 검정색 배경에 40% 투명도
+        
+    }
+
+    .logo {
+        
+        font-size: 52px;
+        color: #612af745;
+        margin-bottom: 10px;
+    }
+
+    
+
+    .card {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 40%;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+
+        .card_header {
+            text-align: center;
+            padding: 20px;
+            font-size: 25px;
+            background-color: rgb(101, 122, 225);
+            color: white;
+        }
+
+        .card_main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+           
+                
+             .input_container {
+                
+                padding: 10px;
+               
+                input {
+                    width: 450px;
+                    padding: 15px;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    border-bottom: 1px solid grey;
+                    font-size: 18px;
+                    
+                }
+            }
+          
+        }
+
+        .login_button {
+            border: none;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            width: 450px;
+            text-align: center;
+            padding: 10px;
+            background-color: #26a69a;
+            color: white;
+            margin-top: 10px;
+            transition-duration: 1s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #39e4d3;
+            }
+    }
+
+    .footer {
+        margin-top: 20px;
+        border-top: 1px solid rgb(211, 209, 209);
+        width: 100%;
+        background-color: white;
+        
+        .footer_content {
+            display: flex;
+            justify-content: flex-end;
+            padding: 30px;
+            .content {
+                margin-right: 15px;
+            }
+            a {
+                color: blue;
+                text-decoration: none;
+            }
+        }
+        
+    }
+}
+
+
+}
